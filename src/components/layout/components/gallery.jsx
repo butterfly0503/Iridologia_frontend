@@ -6,7 +6,7 @@ export class Gallery extends Component {
       <div id="portfolio" className="text-center">
         <div className="container">
           <div className="section-title">
-            <h2>{this.props.data ? this.props.data.title : 'loading...'}</h2>
+            <h2>{this.props.data ? this.props.data.title : "loading..."}</h2>
           </div>
           <div className="row">
             <div className="portfolio-items">
@@ -20,7 +20,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph1 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph1
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/1_small.png"
@@ -41,7 +45,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph2 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph2
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/2_small.png"
@@ -62,7 +70,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph3 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph3
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/3_small.png"
@@ -83,7 +95,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph4 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph4
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/4_small.png"
@@ -104,7 +120,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph5 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph5
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/5_small.png"
@@ -125,7 +145,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph6 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph6
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/6_small.png"
@@ -146,7 +170,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph7 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph7
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/7_small.png"
@@ -167,7 +195,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph8 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph8
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/8_small.png"
@@ -188,7 +220,11 @@ export class Gallery extends Component {
                       data-lightbox-gallery="gallery1"
                     >
                       <div className="hover-text">
-                        <h4>{this.props.data ? this.props.data.paragraph9 : 'loading...'}</h4>
+                        <h4>
+                          {this.props.data
+                            ? this.props.data.paragraph9
+                            : "loading..."}
+                        </h4>
                       </div>
                       <img
                         src="img/portfolio/eye_gallery/9_small.png"

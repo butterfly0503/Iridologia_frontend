@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Axios from "axios";
 export class Contact extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       name: "",
       email: "",
-      message: ""
-    }
+      message: "",
+    };
   }
-  sendMessage =(e)=>{
+  sendMessage = (e) => {
     e.preventDefault();
     Axios({
       method: "POST",
@@ -17,26 +17,26 @@ export class Contact extends Component {
       data: {
         name: this.state.name,
         email: this.state.email,
-        message: this.state.message
-      }
-    }).then((res)=>{
-      console.log(res)
-    })
-  }
+        message: this.state.message,
+      },
+    }).then((res) => {
+      console.log(res);
+    });
+  };
 
-  changeNameHandler =(e,i)=>{
-    console.log(e.target.value)
+  changeNameHandler = (e, i) => {
+    console.log(e.target.value);
     var tempName = e.target.value;
-    this.setState({name: tempName})
-  }
-  changeEmailHandler =(e)=>{
+    this.setState({ name: tempName });
+  };
+  changeEmailHandler = (e) => {
     var tempEmail = e.target.value;
-    this.setState({email: tempEmail})
-  }
-  changeMessageHandler =(e)=>{
+    this.setState({ email: tempEmail });
+  };
+  changeMessageHandler = (e) => {
     var tempMessage = e.target.value;
-    this.setState({message: tempMessage})
-  }
+    this.setState({ message: tempMessage });
+  };
   render() {
     return (
       <div>
@@ -46,49 +46,70 @@ export class Contact extends Component {
               <div className="row">
                 <div className="section-title">
                   <h2>{this.props.data ? this.props.data.title : "loading"}</h2>
-                  <p>{this.props.data ? this.props.data.paragraph : "loading"}</p>
+                  <p>
+                    {this.props.data ? this.props.data.paragraph : "loading"}
+                  </p>
                 </div>
-                <form name="sentMessage" id="contactForm" onSubmit = {this.sendMessage}>
+                <form
+                  name="sentMessage"
+                  id="contactForm"
+                  onSubmit={this.sendMessage}
+                >
                   <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-xs-12 col-sm-6">
                       <div className="form-group">
                         <input
                           type="text"
                           id="name"
-                          className="form-control goodIdea"
-                          placeholder={this.props.data ? this.props.data.inputName : "loading"}
+                          className="form-control"
+                          placeholder={
+                            this.props.data
+                              ? this.props.data.inputName
+                              : "loading"
+                          }
                           required="required"
-                          onChange = {this.changeNameHandler}
+                          onChange={this.changeNameHandler}
                         />
                         <p className="help-block text-danger"></p>
                       </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-xs-12 col-sm-6">
                       <div className="form-group">
                         <input
                           type="email"
                           id="email"
-                          className="form-control goodIdea"
-                          placeholder={this.props.data ? this.props.data.inputEmail : "loading"}
+                          className="form-control"
+                          placeholder={
+                            this.props.data
+                              ? this.props.data.inputEmail
+                              : "loading"
+                          }
                           required
-                          onChange = {this.changeEmailHandler}
+                          onChange={this.changeEmailHandler}
                         />
                         <p className="help-block text-danger"></p>
                       </div>
                     </div>
                   </div>
-                  <div className="form-group">
-                    <textarea
-                      name="message"
-                      id="message"
-                      className="form-control"
-                      rows="4"
-                      placeholder={this.props.data ? this.props.data.inputMessage : "loading"}
-                      required="required"
-                      onChange = {this.changeMessageHandler}
-                    ></textarea>
-                    <p className="help-block text-danger"></p>
+                  <div className="col-12">
+                    <div className="form-group">
+                      <textarea
+                        name="message"
+                        id="message"
+                        className="form-control"
+                        rows="4"
+                        placeholder={
+                          this.props.data
+                            ? this.props.data.inputMessage
+                            : "loading"
+                        }
+                        required="required"
+                        onChange={this.changeMessageHandler}
+                      ></textarea>
+                      <p className="help-block text-danger"></p>
+                    </div>
                   </div>
+
                   <div id="success"></div>
                   <button type="submit" className="btn btn-custom btn-lg">
                     {this.props.data ? this.props.data.submitButton : "loading"}
@@ -98,12 +119,15 @@ export class Contact extends Component {
             </div>
             <div className="col-md-3 col-md-offset-1 contact-info">
               <div className="contact-item">
-                <h3>{this.props.data ? this.props.data.mailTitle : "loading"}</h3>
+                <h3>
+                  {this.props.data ? this.props.data.mailTitle : "loading"}
+                </h3>
               </div>
               <div className="contact-item">
                 <p>
                   <span>
-                    <i className="fa fa-envelope-o"></i> {this.props.data ? this.props.data.mailTitle1 : "loading"}
+                    <i className="fa fa-envelope-o"></i>{" "}
+                    {this.props.data ? this.props.data.mailTitle1 : "loading"}
                   </span>{" "}
                   {this.props.data ? this.props.data.email : "loading"}
                 </p>
