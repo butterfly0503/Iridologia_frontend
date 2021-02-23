@@ -1,17 +1,32 @@
 /* Navigation */
-@media (max-width: 1399.98px) {
-}
 @media (max-width: 1199.98px) {
-  #menu .navbar-header {
-    width: 100%;
+  #menu .app-logo img {
+    width: 69px;
+    margin-right: 50px;
   }
 }
 @media (max-width: 991.98px) {
-  #menu .navbar-header {
-    width: unset;
+  #menu .app-logo img {
+    width: 69px;
+    margin-right: 30px;
+  }
+  #menu .lang-selector-list .MuiButtonBase-root {
+    padding: 12px 4px;
+  }
+  #menu .navbar-collapse ul li a {
+    margin: 9px 8px 0 8px !important;
   }
 }
 @media (max-width: 767.98px) {
+  #menu .navbar-header {
+    width: 100%;
+  }
+  #menu .lang-selector {
+    margin-left: auto;
+  }
+  #menu .navbar-collapse {
+    background-color: #5ca9fb;
+  }
   #menu .navbar-collapse ul li {
     width: 100%;
   }
@@ -28,8 +43,8 @@
   }
 }
 
+/* Header Section */
 @media (max-width: 1399.98px) {
-  /* Header Section */
   .intro h1 {
     font-size: 70px;
   }
@@ -43,23 +58,31 @@
   }
 }
 @media (max-width: 1199.98px) {
-  /* Header Section */
   .intro h1 {
     font-size: 60px;
   }
 }
 @media (max-width: 991.98px) {
-  /* Header Section */
   .intro h1 {
     font-size: 48px;
   }
 }
 @media (max-width: 767.98px) {
-  /* Header Section */
   .intro h1 {
     font-size: 44px;
   }
 }
+@media (max-width: 575.98px) {
+  /* Header Section */
+  .intro h1 {
+    font-size: 40px;
+  }
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+}
+
 @media (max-width: 575.98px) {
   /* Header Section */
   .intro h1 {
@@ -81,6 +104,7 @@
     padding: 40px 0;
   }
 }
+
 .aligned-row {
   display: flex;
   flex-flow: row wrap;

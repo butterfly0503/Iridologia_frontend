@@ -15,7 +15,6 @@ import JsonData3 from "./data/data_it.json";
 import JsonData4 from "./data/data_pt.json";
 import JsonData5 from "./data/data_es.json";
 import { connect } from "react-redux";
-import Naviagtionbar from "./components/navigationbar";
 
 export class App extends Component {
   state = {

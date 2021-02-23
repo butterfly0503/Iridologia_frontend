@@ -77,17 +77,11 @@ hr {
 #menu .navbar-header {
   display: flex;
 }
-#menu .lang-selector {
-  margin-left: auto;
-}
-#menu .lang-selector-list {
+#menu .lang-selector .lang-selector-list {
   display: block;
 }
-#menu .lang-selector-dropdown {
+#menu .lang-selector .lang-selector-dropdown {
   display: none;
-}
-#menu .navbar-collapse ul li {
-  width: unset;
 }
 #menu {
   padding: 2px;
