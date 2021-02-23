@@ -17,11 +17,13 @@ const useStyles = makeStyles({
     paddingBottom: "30px",
   },
   root: {
-    display: "inline-block",
+    display: "flex",
+    flexDirection: "column",
     border: "1px solid #E336FF",
     width: "100%",
     maxWidth: "420px",
     margin: "auto",
+    height: "100%",
   },
   title: {
     fontFamily: "initial",
@@ -38,8 +40,8 @@ export default function MediaCard(props) {
     <div className={classes.container} id="buy-space">
       <h1 className={classes.title}>{data.title}</h1>
       <div className="container">
-        <div className="row">
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-3">
+        <div className="row aligned-row">
+          <div className="col-sm-12 col-md-4 col-lg-4 mb-3 d-flex">
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -84,17 +86,10 @@ export default function MediaCard(props) {
                       <CheckIcon color="secondary" />
                       <i style={{ verticalAlign: "super" }}> {data.free6}</i>
                     </div>
-                    <div>
-                      <br />
-                    </div>
-                    <div>
-                      <br />
-                      <br />
-                    </div>
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
+              <CardActions className="mt-auto">
                 <Button
                   fullWidth
                   variant="outlined"
@@ -107,7 +102,7 @@ export default function MediaCard(props) {
               </CardActions>
             </Card>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div className="col-sm-12 col-md-4 col-lg-4 mb-3 d-flex">
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
@@ -176,7 +171,7 @@ export default function MediaCard(props) {
               </CardActions>
             </Card>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div className="col-sm-12 col-md-4 col-lg-4 mb-3 d-flex">
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
