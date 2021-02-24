@@ -12,8 +12,34 @@ export class Navigation extends Component {
     collapsed: true,
   };
 
-  ChangeLanguage = (flag) => (dispatch) => {
+  handleChange = (index) => {
+    switch (index) {
+      case 1:
+        this.handleChangeLanguage("1");
+        break;
+      case 2:
+        this.handleChangeLanguage("2");
+        break;
+      case 3:
+        this.handleChangeLanguage("3");
+        break;
+      case 4:
+        this.handleChangeLanguage("4");
+        break;
+      default:
+        this.handleChangeLanguage("5");
+        break;
+    }
+  };
+
+  handleChangeLanguage = (flag) => {
+    console.log("flag", flag);
+    console.log("this.props", this.props);
     this.props.TranslateAction(flag);
+
+    // return (dispatch) => {
+    //   this.props.TranslateAction(flag);
+    // };
   };
 
   renderToggler = () => {
@@ -34,21 +60,21 @@ export class Navigation extends Component {
   renderLangSelector = () => {
     return (
       <div className="lang-selector">
-        <LangSelect />
+        <LangSelect onChange={(index) => this.handleChange(index)} />
         <div className="lang-selector-list">
-          <IconButton onClick={this.ChangeLanguage("1")}>
+          <IconButton onClick={(e) => this.handleChangeLanguage("1")}>
             <Flag country="US" />
           </IconButton>
-          <IconButton onClick={this.ChangeLanguage("2")}>
+          <IconButton onClick={(e) => this.handleChangeLanguage("2")}>
             <Flag country="FR" />
           </IconButton>
-          <IconButton onClick={this.ChangeLanguage("3")}>
+          <IconButton onClick={(e) => this.handleChangeLanguage("3")}>
             <Flag country="IT" />
           </IconButton>
-          <IconButton onClick={this.ChangeLanguage("4")}>
+          <IconButton onClick={(e) => this.handleChangeLanguage("4")}>
             <Flag country="PT" />
           </IconButton>
-          <IconButton onClick={this.ChangeLanguage("5")}>
+          <IconButton onClick={(e) => this.handleChangeLanguage("5")}>
             <Flag country="ES" />
           </IconButton>
         </div>

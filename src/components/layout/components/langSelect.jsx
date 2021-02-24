@@ -3,7 +3,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Flag from "react-flagkit";
 import { IconButton } from "@material-ui/core";
-import { TranslateAction } from "../../../actions/translateAction";
 
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -22,6 +21,7 @@ const useStyles = makeStyles({
 });
 
 const LangSelect = (props) => {
+  const { onChange } = props;
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -29,17 +29,12 @@ const LangSelect = (props) => {
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
-    console.log("props", props);
   };
 
   const handleClose = (index) => {
-    handleChangeLanguage(`${index}`);
     setFlagIndex(index - 1);
+    onChange(index);
     setAnchorEl(null);
-  };
-
-  const handleChangeLanguage = (flag) => (dispatch) => {
-    props.TranslateAction(flag);
   };
 
   return (
@@ -107,10 +102,5 @@ const LangSelect = (props) => {
     </div>
   );
 };
-const mapStateToProps = (state) => ({
-  translator: state.translator,
-});
 
-export default connect(mapStateToProps, { TranslateAction })(
-  withRouter(LangSelect)
-);
+export default connect()(withRouter(LangSelect));

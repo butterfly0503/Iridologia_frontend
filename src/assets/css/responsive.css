@@ -38,12 +38,17 @@
   #menu .app-logo img {
     margin-right: 20px;
   }
-  /* #menu .lang-selector .lang-selector-list {
+}
+@media (max-width: 499.98px) {
+  #menu .app-logo img {
+    margin-right: 20px;
+  }
+  #menu .lang-selector .lang-selector-list {
     display: none;
   }
   #menu .lang-selector .lang-selector-dropdown {
     display: block;
-  } */
+  }
 }
 
 /* Header Section */
