@@ -4,6 +4,9 @@
     width: 69px;
     margin-right: 50px;
   }
+  #menu .navbar-collapse ul li a {
+    margin: 9px 16px 0 16px !important;
+  }
 }
 @media (max-width: 991.98px) {
   #menu .app-logo img {
@@ -14,7 +17,7 @@
     padding: 12px 4px;
   }
   #menu .navbar-collapse ul li a {
-    margin: 9px 8px 0 8px !important;
+    margin: 9px 3px 0 3px !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -35,12 +38,12 @@
   #menu .app-logo img {
     margin-right: 20px;
   }
-  #menu .lang-selector-list {
+  /* #menu .lang-selector .lang-selector-list {
     display: none;
   }
-  #menu .lang-selector-dropdown {
+  #menu .lang-selector .lang-selector-dropdown {
     display: block;
-  }
+  } */
 }
 
 /* Header Section */
